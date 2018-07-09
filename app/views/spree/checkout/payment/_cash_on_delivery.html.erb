@@ -1,10 +1,11 @@
 <div class="payment_type">
-  <p><%= t('cash_on_delivery.views.payment.description').html_safe %></p>
+  <!--  <p><%#= t('cash_on_delivery.views.payment.description').html_safe %></p>-->
+  <p>We are a new and small family business... We need to pass a part of the Cash handling fee to you. Our digital payment modes are free, please try those</p>
   <blockquote>
-    <p><strong><%= t('cash_on_delivery.views.payment.concept') %></strong>: <%= @order.number %></p>
+    <!--    <p><strong><%#= t('cash_on_delivery.views.payment.concept') %></strong>: <%#= @order.number %></p>-->
     <p><strong><%= t('cash_on_delivery.views.payment.amount') %></strong>: <%= @order.display_total %></p>
     <% if payment_method.preferred_fee.present? %>
-        <p><strong><%= t('cash_on_delivery.views.payment.extra', :extra => "#{payment_method.preferred_fee}") %></strong>
+      <p><strong> + <%= t('cash_on_delivery.views.payment.extra', :extra => "#{payment_method.preferred_fee}") %></strong>
     <% end %>
   </blockquote>
 </div>
